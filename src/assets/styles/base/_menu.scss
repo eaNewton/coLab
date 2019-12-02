@@ -1,0 +1,12 @@
+.desktop-menu-wrapper {
+  display: none;
+  height: 60px;
+  align-items: center;
+  padding: 0 0.625rem;
+  background-color: $darker-gray;
+  box-shadow: 10px 10px 8px #888888;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
