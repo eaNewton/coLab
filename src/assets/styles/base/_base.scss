@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+html,
+body {
+  font-family: $primary-font;
+}
+
+code {
+  padding: 0.25em;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  background-color: lightgray;
+  border: 1px solid gray;
+  color: gray;
+}
+
+div,
+button,
+span {
+  &:focus {
+    outline: 0;
+  }
+}
+
+main {
+  background-color: $dark-gray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  .grid-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.625rem 50px 0.625rem;
+
+    .grid-x {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+}
