@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import AsyncComponentHOC from "./components/HOC/AsyncComponentHOC";
 import TrackableRoute from "./components/Route/TrackableRoute";
@@ -19,52 +20,54 @@ const AsyncSettingsAccount = AsyncComponentHOC(() =>
 const Routes = ({ routeProps }) => {
   return (
     <Router>
-      <App>
-        <Switch>
-          <TrackableRoute
-            path={routeCodes.INDEX}
-            exact
-            component={AsyncHome}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-          <TrackableRoute
-            path={routeCodes.DASHBOARD}
-            exact
-            component={AsyncDashboard}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-          <TrackableRoute
-            path={routeCodes.PROJECTS}
-            exact
-            component={AsyncProjects}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-          <TrackableRoute
-            path={routeCodes.CREATE}
-            exact
-            component={AsyncCreate}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-          <TrackableRoute
-            path={routeCodes.SETTINGS}
-            exact
-            component={AsyncSettings}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-          <TrackableRoute
-            path={routeCodes.SETTINGS_ACCOUNT}
-            exact
-            component={AsyncSettingsAccount}
-            props={routeProps}
-            type={routeTypes.PUBLIC}
-          />
-        </Switch>
-      </App>
+      <ThemeProvider>
+        <App>
+          <Switch>
+            <TrackableRoute
+              path={routeCodes.INDEX}
+              exact
+              component={AsyncHome}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+            <TrackableRoute
+              path={routeCodes.DASHBOARD}
+              exact
+              component={AsyncDashboard}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+            <TrackableRoute
+              path={routeCodes.PROJECTS}
+              exact
+              component={AsyncProjects}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+            <TrackableRoute
+              path={routeCodes.CREATE}
+              exact
+              component={AsyncCreate}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+            <TrackableRoute
+              path={routeCodes.SETTINGS}
+              exact
+              component={AsyncSettings}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+            <TrackableRoute
+              path={routeCodes.SETTINGS_ACCOUNT}
+              exact
+              component={AsyncSettingsAccount}
+              props={routeProps}
+              type={routeTypes.PUBLIC}
+            />
+          </Switch>
+        </App>
+      </ThemeProvider>
     </Router>
   );
 };

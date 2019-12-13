@@ -2,13 +2,16 @@
 $primary-font: "Source Sans Pro", sans-serif;
 
 // Colors
-$black: #000000;
-$white: #ffffff;
-
-$dark-gray: #484a47;
-$darker-gray: darken($dark-gray, 5%);
+$black: #39393a;
+$white: #fcfcfc;
 
 $medium-gray: #7d7c7a;
+$darker-gray: #454443;
+
+$light-background: #eeeeee;
+$light-menu-background: darken($light-background, 5%);
+$dark-background: darken($medium-gray, 10%);
+$dark-menu-background: #454443;
 
 $light-gray: lighten($medium-gray, 40%);
 $faint-gray: rgba(255, 255, 255, 0.25);
