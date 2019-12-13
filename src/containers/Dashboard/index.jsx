@@ -4,8 +4,12 @@ import Layout from "../../components/Layout";
 const Dashboard = () => {
   return (
     <Layout>
-      <div>
-        <h1>Dashboard</h1>
+      <div className="grid">
+        <div className="grid-x">
+          <div className="page-title">
+            <h2>Dashboard</h2>
+          </div>
+        </div>
       </div>
     </Layout>
   );

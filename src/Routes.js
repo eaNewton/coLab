@@ -12,6 +12,9 @@ const AsyncDashboard = AsyncComponentHOC(() =>
 const AsyncProjects = AsyncComponentHOC(() => import("./containers/Projects"));
 const AsyncCreate = AsyncComponentHOC(() => import("./containers/Create"));
 const AsyncSettings = AsyncComponentHOC(() => import("./containers/Settings"));
+const AsyncSettingsAccount = AsyncComponentHOC(() =>
+  import("./containers/Settings/AccountEdit")
+);
 
 const Routes = ({ routeProps }) => {
   return (
@@ -50,6 +53,13 @@ const Routes = ({ routeProps }) => {
             path={routeCodes.SETTINGS}
             exact
             component={AsyncSettings}
+            props={routeProps}
+            type={routeTypes.PUBLIC}
+          />
+          <TrackableRoute
+            path={routeCodes.SETTINGS_ACCOUNT}
+            exact
+            component={AsyncSettingsAccount}
             props={routeProps}
             type={routeTypes.PUBLIC}
           />

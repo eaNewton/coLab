@@ -5,8 +5,12 @@ class Home extends PureComponent {
   render() {
     return (
       <Layout>
-        <div>
-          <h1>Home</h1>
+        <div className="grid">
+          <div className="grid-x">
+            <div className="page-title">
+              <h2>Home</h2>
+            </div>
+          </div>
         </div>
       </Layout>
     );

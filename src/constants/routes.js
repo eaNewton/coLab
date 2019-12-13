@@ -7,7 +7,8 @@ const routeCodes = {
 
   CREATE: "/create",
 
-  SETTINGS: "/settings"
+  SETTINGS: "/settings",
+  SETTINGS_ACCOUNT: "/settings/account"
 };
 
 export const routeTypes = {
