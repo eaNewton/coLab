@@ -2,8 +2,19 @@
 $primary-font: "Source Sans Pro", sans-serif;
 
 // Colors
+$black: #000000;
+$white: #ffffff;
+
 $dark-gray: #484a47;
 $darker-gray: darken($dark-gray, 5%);
+
+$medium-gray: #7d7c7a;
+
+$primary: #bee3db;
+$dark-primary: #89b0ae;
+
+$secondary: #efa48b;
+$dark-secondary: darken($secondary, 5%);
 
 // Breakpoints
 $tablet: medium;

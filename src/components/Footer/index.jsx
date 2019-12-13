@@ -6,7 +6,7 @@ class Footer extends PureComponent {
     return (
       <footer>
         <div className="footer-container mobile-menu-wrapper">
-          <Menu menuId="" />
+          <Menu menuId="mobile-menu" />
         </div>
       </footer>
     );
