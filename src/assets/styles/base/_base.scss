@@ -36,8 +36,6 @@ main {
   align-items: center;
   justify-content: flex-start;
   padding: 0 0.625rem;
-  background-color: $dark-gray;
-  color: white;
   font-size: calc(10px + 2vmin);
 
   .grid {
@@ -75,7 +73,7 @@ main {
   bottom: 0;
   left: 0;
   background-color: $light-gray;
-  transition: 0.4s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 
   &:focus {
     outline: none;
@@ -89,7 +87,7 @@ main {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: 0.4s all ease-in-out;
+    transition: 0.25s all ease-in-out;
   }
 }
 
@@ -127,8 +125,17 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
+    border: none;
     color: $secondary;
     font-size: 18px;
     font-weight: 700;
+    transition: 0.05s all ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.05s all ease-in-out;
+    }
   }
 }

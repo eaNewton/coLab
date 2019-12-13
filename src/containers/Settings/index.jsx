@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import ThemeContext from "../../context/ThemeContext";
 import Layout from "../../components/Layout";
 import routeCodes from "../../constants/routes";
 
 const Settings = props => {
-  const [theme, setTheme] = useState("light");
-
-  const handleThemeChange = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  const { dark, toggle } = useContext(ThemeContext);
 
   return (
-    <Layout>
+    <Layout className="bg-settings">
       <div className="grid">
         <div className="grid-x">
           <div className="page-title">
@@ -28,9 +21,10 @@ const Settings = props => {
                   <span>Theme</span>
                   <label className="switch">
                     <input
-                      className="float-right"
+                      className="switch float-right"
                       type="checkbox"
-                      onChange={handleThemeChange}
+                      checked={!!dark ? true : false}
+                      onChange={() => toggle()}
                     />
                     <span className="slider round"></span>
                   </label>

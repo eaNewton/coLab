@@ -1,0 +1,12 @@
+.layout.dark {
+  main {
+    background-color: $dark-background;
+    color: $white;
+  }
+
+  footer {
+    .mobile-menu-wrapper {
+      background-color: $dark-menu-background;
+    }
+  }
+}

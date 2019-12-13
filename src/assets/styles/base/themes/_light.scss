@@ -1,0 +1,12 @@
+.layout.light {
+  main {
+    background-color: $light-background;
+    color: $black;
+  }
+
+  footer {
+    .mobile-menu-wrapper {
+      background-color: $light-menu-background;
+    }
+  }
+}
