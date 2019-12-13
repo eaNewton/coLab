@@ -9,7 +9,7 @@ const MenuItem = props => {
       <NavLink to={itemUrl} activeClassName="active">
         <div className="menu-item">
           <img alt="" src={itemImgSrc} className={itemClass} />
-          {itemTitle}
+          {/* itemTitle */}
         </div>
       </NavLink>
     </li>
