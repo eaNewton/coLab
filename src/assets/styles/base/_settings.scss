@@ -10,6 +10,9 @@ $darker-gray: darken($dark-gray, 5%);
 
 $medium-gray: #7d7c7a;
 
+$light-gray: lighten($medium-gray, 40%);
+$faint-gray: rgba(255, 255, 255, 0.25);
+
 $primary: #bee3db;
 $dark-primary: #89b0ae;
 

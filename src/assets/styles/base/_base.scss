@@ -24,24 +24,111 @@ span {
   }
 }
 
+.link {
+  color: $primary;
+  text-decoration: none;
+}
+
 main {
-  background-color: $dark-gray;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  padding: 0 0.625rem;
+  background-color: $dark-gray;
   color: white;
+  font-size: calc(10px + 2vmin);
 
-  .grid-container {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 0 0.625rem 50px 0.625rem;
+  .grid {
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+  }
+}
 
-    .grid-x {
-      display: flex;
-      flex-flow: row wrap;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:focus {
+      outline: none;
     }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $light-gray;
+  transition: 0.4s all ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s all ease-in-out;
+  }
+}
+
+input:checked + .slider {
+  background-color: $darker-gray;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $darker-gray;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.back-button-container {
+  .back-button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $secondary;
+    font-size: 18px;
+    font-weight: 700;
   }
 }
